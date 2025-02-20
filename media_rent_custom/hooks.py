@@ -26,7 +26,7 @@ app_license = "mit"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/media_rent_custom/css/media_rent_custom.css"
-# app_include_js = "/assets/media_rent_custom/js/media_rent_custom.js"
+# app_include_js = "/assets/media_rent_custom/js/quotation.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/media_rent_custom/css/media_rent_custom.css"
@@ -43,7 +43,7 @@ app_license = "mit"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {"Quotation" : "public/js/quotation.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -51,7 +51,7 @@ app_license = "mit"
 # Svg Icons
 # ------------------
 # include app icons in desk
-# app_include_icons = "media_rent_custom/public/icons.svg"
+# app_include_icons = "media_rent_custom/public/icons.png"
 
 # Home Pages
 # ----------
