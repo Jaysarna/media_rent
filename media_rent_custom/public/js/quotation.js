@@ -16,7 +16,7 @@ function calculate_qty(frm, cdt, cdn) {
         var days_difference = time_difference / (1000 * 3600 * 24);
 
         frm.doc.items.forEach(function(item) {
-            frappe.model.set_value(item.doctype, item.name, 'qty', days_difference);
+            frappe.model.set_value(item.doctype, item.name, 'custom_rental_days', days_difference);
         });
 
         frm.refresh_field('items');
