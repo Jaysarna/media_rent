@@ -140,7 +140,7 @@
   "in_list_view": 0,
   "in_preview": 0,
   "in_standard_filter": 0,
-  "insert_after": "custom_start_date",
+  "insert_after": "custom_scheduled_rental_start",
   "is_system_generated": 0,
   "is_virtual": 0,
   "label": "",
