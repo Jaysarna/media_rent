@@ -1,0 +1,46 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"y6mBOeXRH8\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Media Rent</span>\",\"col\":12}},{\"id\":\"EpKo2H1NPh\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Quotation\",\"col\":3}},{\"id\":\"CrfJbHAlyD\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"View Quotation\",\"col\":3}}]",
+ "creation": "2025-02-20 08:18:35.831972",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "full-page",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Media Rent",
+ "links": [],
+ "modified": "2025-02-21 13:28:48.495748",
+ "modified_by": "Administrator",
+ "module": "Media Rent Custom",
+ "name": "Media Rent",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "View Quotation",
+   "link_to": "Quotation",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "Create Quotation",
+   "link_to": "Quotation",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Media Rent"
+}
