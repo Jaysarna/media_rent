@@ -256,14 +256,13 @@ fixtures=[
     {
         "dt": "Custom Field",
         "filters": [
-            [
-                "module",
-                "in",
-                [
-                    "Media Rent Custom",
-                ]
-            ]
+            ["module","in",["Media Rent Custom",]]
+        ]
+    },
+    {
+        "dt":"Notification",
+    "filters": [
+        ["module", "in", ["Media Rent Custom",]]
         ]
     }
 ]
-

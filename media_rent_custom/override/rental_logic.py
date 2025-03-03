@@ -13,8 +13,8 @@ def serial_number_update(self,method):
                 serial_doc.custom_customer = self.customer
                 serial_doc.custom_start_date = item.custom_start_date
                 serial_doc.custom_end_date = item.custom_end_date
+                serial_doc.custom_touch_option = item.custom_touch_option 
                 # serial_doc.custom_rental_days = int(item.custom_rental_days)
-                # serial_doc.custom_touch_option = item.custom_touch_option
                 # frappe.throw(serial_doc.custom_rental_days)
                 serial_doc.save()
 

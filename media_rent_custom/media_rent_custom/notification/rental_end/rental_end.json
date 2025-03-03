@@ -1,0 +1,29 @@
+{
+ "attach_print": 0,
+ "channel": "System Notification",
+ "creation": "2025-03-03 17:21:47.718267",
+ "date_changed": "custom_end_date",
+ "days_in_advance": 1,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Serial No",
+ "enabled": 1,
+ "event": "Days Before",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Screen Rental will end for the client tomorrow check the doc\n<a href=\"http://172.28.77.82:8006/app/serial-no/{{doc.name}}\"></a>",
+ "message_type": "Markdown",
+ "modified": "2025-03-03 17:22:04.315034",
+ "modified_by": "Administrator",
+ "module": "Media Rent Custom",
+ "name": "Rental end",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "owner"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "Rental for client {{doc.custom_customer}} will end tomorrow"
+}
