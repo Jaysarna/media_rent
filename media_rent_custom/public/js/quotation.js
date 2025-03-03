@@ -15,6 +15,12 @@ frappe.ui.form.on('Quotation Item', {
     },
     custom_end_date: function(frm, cdt, cdn) {
         calculate_qty(frm, cdt, cdn);
+    },
+    qty: function(frm, cdt, cdn) {
+        calculate_qty(frm, cdt, cdn);
+    },
+    rate: function(frm, cdt, cdn) {
+        calculate_qty(frm, cdt, cdn);
     }
 });
 

@@ -142,7 +142,13 @@ doctype_js = {"Quotation" : "public/js/quotation.js",
 doc_events = {
 	"Quotation": {
 		"validate": "media_rent_custom.override.rental_logic.change_total",
-	}
+	},
+    "Sales Order": {
+        "validate": "media_rent_custom.override.rental_logic.change_total",
+    },
+    "Sales Invoice": {
+        "validate": "media_rent_custom.override.rental_logic.change_total",
+    }
 }
 
 # Scheduled Tasks
