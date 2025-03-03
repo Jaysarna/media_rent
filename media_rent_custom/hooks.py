@@ -139,13 +139,11 @@ doctype_js = {"Quotation" : "public/js/quotation.js",
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	"Quotation": {
+		"validate": "media_rent_custom.override.rental_logic.change_total",
+	}
+}
 
 # Scheduled Tasks
 # ---------------

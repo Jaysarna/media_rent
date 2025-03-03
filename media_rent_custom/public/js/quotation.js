@@ -1,3 +1,14 @@
+frappe.ui.form.on('Quotation', {
+    validate: function(frm) {
+        for (let row of frm.doc.items) {
+            if (!row.custom_start_date || !row.custom_end_date) {
+                console.log("test")
+                calculate_qty(frm, row.doctype, row.name);
+            }
+        }
+    }
+});
+
 frappe.ui.form.on('Quotation Item', {
     custom_start_date: function(frm, cdt, cdn) {
         calculate_qty(frm, cdt, cdn);
@@ -15,9 +26,8 @@ function calculate_qty(frm, cdt, cdn) {
         var time_difference = end_date - start_date;
         var days_difference = time_difference / (1000 * 3600 * 24);
 
-        frm.doc.items.forEach(function(item) {
-            frappe.model.set_value(item.doctype, item.name, 'custom_rental_days', days_difference);
-        });
+        frappe.model.set_value(cdt, cdn, 'custom_rental_days', days_difference);
+        frappe.model.set_value(cdt, cdn, 'amount', days_difference * doc.qty * doc.rate);
 
         frm.refresh_field('items');
     }
