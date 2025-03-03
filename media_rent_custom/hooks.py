@@ -148,7 +148,11 @@ doc_events = {
     },
     "Sales Invoice": {
         "validate": "media_rent_custom.override.rental_logic.change_total",
-    }
+        "on_submit": "media_rent_custom.override.rental_logic.serial_number_update",
+    },
+    "Serial No": {
+        "validate": "media_rent_custom.override.rental_logic.rental_days",
+    },
 }
 
 # Scheduled Tasks
