@@ -1,0 +1,180 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "RENTAL - .#######",
+ "creation": "2025-03-12 06:25:09.325310",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_mrzl",
+  "customer",
+  "column_break_xign",
+  "date",
+  "amended_from",
+  "rental_section",
+  "start_date",
+  "schedule_start_date",
+  "rental_days",
+  "column_break_lhxa",
+  "end_date",
+  "schedule_end_date",
+  "touch_option",
+  "section_break_qnxh",
+  "rate",
+  "quantity",
+  "column_break_tsuo",
+  "total_daysqty",
+  "amount",
+  "delivery_and_pickup_section",
+  "delivery_date",
+  "column_break_lgie",
+  "date_of_return"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_mrzl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Rental Agreement",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "rental_section",
+   "fieldtype": "Section Break",
+   "label": "Rental "
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "rental_days",
+   "fieldtype": "Float",
+   "label": "Rental Days"
+  },
+  {
+   "fieldname": "column_break_lhxa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "touch_option",
+   "fieldtype": "Select",
+   "label": "Touch Option",
+   "options": "Enable\nDisable"
+  },
+  {
+   "fieldname": "schedule_start_date",
+   "fieldtype": "Date",
+   "label": "Schedule Start Date"
+  },
+  {
+   "fieldname": "schedule_end_date",
+   "fieldtype": "Date",
+   "label": "Schedule End Date"
+  },
+  {
+   "fieldname": "section_break_qnxh",
+   "fieldtype": "Section Break",
+   "label": "Rental Amount"
+  },
+  {
+   "description": "Rate Per Day , Per piece",
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "label": "Rate"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Float",
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "column_break_tsuo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "column_break_xign",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Rental Days * Quantity",
+   "fieldname": "total_daysqty",
+   "fieldtype": "Float",
+   "label": "Total Days/Qty"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "delivery_and_pickup_section",
+   "fieldtype": "Section Break",
+   "label": "Delivery and Pickup"
+  },
+  {
+   "fieldname": "delivery_date",
+   "fieldtype": "Date",
+   "label": "Delivery Date"
+  },
+  {
+   "fieldname": "column_break_lgie",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_return",
+   "fieldtype": "Date",
+   "label": "Date of Return"
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-03-16 06:30:42.895348",
+ "modified_by": "Administrator",
+ "module": "Media Rent Custom",
+ "name": "Rental Agreement",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

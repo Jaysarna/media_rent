@@ -143,13 +143,13 @@ doc_events = {
 	"Quotation": {
 		"validate": "media_rent_custom.override.rental_logic.change_total",
 	},
-    "Sales Order": {
-        "validate": "media_rent_custom.override.rental_logic.change_total",
-    },
-    "Sales Invoice": {
-        "validate": "media_rent_custom.override.rental_logic.change_total",
-        "on_submit": "media_rent_custom.override.rental_logic.serial_number_update",
-    },
+    # "Sales Order": {
+    #     "validate": "media_rent_custom.override.rental_logic.change_total",
+    # },
+    # "Sales Invoice": {
+    #     "validate": "media_rent_custom.override.rental_logic.change_total",
+    #     # "after_submit": "media_rent_custom.override.rental_logic.serial_number_update"
+    # },
     "Serial No": {
         "validate": "media_rent_custom.override.rental_logic.rental_days",
     },

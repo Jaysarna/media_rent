@@ -7,6 +7,7 @@ def rental_days(self,method):
 def serial_number_update(self,method):
     for item in self.items:
         if item.serial_and_batch_bundle:
+            # frappe.throw(f"{item.serial_and_batch_bundle}")
             serial_and_batch_bundle = frappe.get_doc("Serial and Batch Bundle", item.serial_and_batch_bundle)
             for serial in serial_and_batch_bundle.entries:
                 serial_doc = frappe.get_doc("Serial No", serial.serial_no)
