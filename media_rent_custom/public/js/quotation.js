@@ -17,8 +17,8 @@ frappe.ui.form.on('Quotation', {
             };
             frappe.db.insert({
                 doctype: 'Rental Agreement',
-                customer: frm.doc.customer,
-                date: frm.doc.date,
+                customer: frm.doc.party_name,
+                date: frm.doc.transaction_date,
                 // Sum quantities from all items
                 quantity: frm.doc.items.reduce((total, item) => total + (item.qty || 0), 0),
                 // Sum amounts from all items
