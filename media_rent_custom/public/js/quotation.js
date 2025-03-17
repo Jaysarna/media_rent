@@ -1,6 +1,9 @@
 frappe.ui.form.on('Quotation', {
     validate: function(frm) {
         for (let row of frm.doc.items) {
+            if (row.actual_qty < row.qty) {
+                frappe.throw(__(`Insufficient quantity available for rental of item <b>${row.item_code}</b>. Please adjust the requested quantity.`));
+            }
             if (!row.custom_start_date || !row.custom_end_date) {
                 console.log("test")
                 calculate_qty(frm, row.doctype, row.name);
