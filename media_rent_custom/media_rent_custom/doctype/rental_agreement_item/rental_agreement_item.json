@@ -1,0 +1,142 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-03-17 14:45:40.136160",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "start_date",
+  "schedule_start_dateschedule_start_date",
+  "rental_days",
+  "rate",
+  "qty",
+  "column_break_usea",
+  "item_name",
+  "end_date",
+  "schedule_end_date",
+  "touch_option",
+  "total_daysqty",
+  "amount",
+  "stock_details_section",
+  "warehouse",
+  "serial_no",
+  "column_break_dzse",
+  "actual_qty"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "options": "Item"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "column_break_usea",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "item_code.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "End Date"
+  },
+  {
+   "fieldname": "schedule_start_dateschedule_start_date",
+   "fieldtype": "Datetime",
+   "label": "Schedule Start DateSchedule Start Date"
+  },
+  {
+   "fieldname": "schedule_end_date",
+   "fieldtype": "Datetime",
+   "label": "Schedule End Date"
+  },
+  {
+   "fieldname": "rental_days",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Rental Days"
+  },
+  {
+   "fieldname": "touch_option",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Touch Option",
+   "options": "No\nYes"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rate"
+  },
+  {
+   "fieldname": "total_daysqty",
+   "fieldtype": "Float",
+   "label": "Total Days/Qty"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount"
+  },
+  {
+   "fieldname": "stock_details_section",
+   "fieldtype": "Section Break",
+   "label": "Stock Details"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "column_break_dzse",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "actual_qty",
+   "fieldtype": "Float",
+   "label": "Available Qty at Warehouse"
+  },
+  {
+   "fieldname": "serial_no",
+   "fieldtype": "Text",
+   "label": "Serial No"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-03-17 15:02:58.931833",
+ "modified_by": "Administrator",
+ "module": "Media Rent Custom",
+ "name": "Rental Agreement Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

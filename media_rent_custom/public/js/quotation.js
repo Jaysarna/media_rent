@@ -6,6 +6,27 @@ frappe.ui.form.on('Quotation', {
                 calculate_qty(frm, row.doctype, row.name);
             }
         }
+    },
+    refresh(frm){
+        frm.add_custom_button(__('Create Rental Agreement'), function() {
+            frm.route_options = {
+                quotation: frm.doc.name
+            };
+            frappe.db.insert({
+                doctype: 'Rental Agreement',
+                customer: frm.doc.customer,
+                date: frm.doc.date,
+                // Sum quantities from all items
+                quantity: frm.doc.items.reduce((total, item) => total + (item.qty || 0), 0),
+                // Sum amounts from all items
+                amount: frm.doc.items.reduce((total, item) => total + (item.amount || 0), 0),
+                delivery_date: frm.doc.delivery_date,
+                items: frm.doc.items
+            }).then(doc => {
+                console.log(doc);
+                frappe.set_route("Form", "Rental Agreement", doc.name);
+            });
+        });
     }
 });
 

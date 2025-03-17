@@ -8,22 +8,16 @@
  "field_order": [
   "section_break_mrzl",
   "customer",
+  "quotation_no",
   "column_break_xign",
   "date",
+  "sales_invoice_no",
   "amended_from",
   "rental_section",
-  "start_date",
-  "schedule_start_date",
-  "rental_days",
-  "column_break_lhxa",
-  "end_date",
-  "schedule_end_date",
-  "touch_option",
+  "items",
   "section_break_qnxh",
-  "rate",
   "quantity",
   "column_break_tsuo",
-  "total_daysqty",
   "amount",
   "delivery_and_pickup_section",
   "delivery_date",
@@ -53,42 +47,7 @@
   {
    "fieldname": "rental_section",
    "fieldtype": "Section Break",
-   "label": "Rental "
-  },
-  {
-   "fieldname": "start_date",
-   "fieldtype": "Date",
-   "label": "Start Date"
-  },
-  {
-   "fieldname": "rental_days",
-   "fieldtype": "Float",
-   "label": "Rental Days"
-  },
-  {
-   "fieldname": "column_break_lhxa",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "end_date",
-   "fieldtype": "Date",
-   "label": "End Date"
-  },
-  {
-   "fieldname": "touch_option",
-   "fieldtype": "Select",
-   "label": "Touch Option",
-   "options": "Enable\nDisable"
-  },
-  {
-   "fieldname": "schedule_start_date",
-   "fieldtype": "Date",
-   "label": "Schedule Start Date"
-  },
-  {
-   "fieldname": "schedule_end_date",
-   "fieldtype": "Date",
-   "label": "Schedule End Date"
+   "label": "Rental Items"
   },
   {
    "fieldname": "section_break_qnxh",
@@ -96,15 +55,10 @@
    "label": "Rental Amount"
   },
   {
-   "description": "Rate Per Day , Per piece",
-   "fieldname": "rate",
-   "fieldtype": "Currency",
-   "label": "Rate"
-  },
-  {
    "fieldname": "quantity",
    "fieldtype": "Float",
-   "label": "Quantity"
+   "label": "Quantity",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_tsuo",
@@ -113,17 +67,12 @@
   {
    "fieldname": "amount",
    "fieldtype": "Currency",
-   "label": "Amount"
+   "label": "Amount",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_xign",
    "fieldtype": "Column Break"
-  },
-  {
-   "description": "Rental Days * Quantity",
-   "fieldname": "total_daysqty",
-   "fieldtype": "Float",
-   "label": "Total Days/Qty"
   },
   {
    "fieldname": "customer",
@@ -149,11 +98,31 @@
    "fieldname": "date_of_return",
    "fieldtype": "Date",
    "label": "Date of Return"
+  },
+  {
+   "fieldname": "quotation_no",
+   "fieldtype": "Link",
+   "label": "Quotation No",
+   "options": "Quotation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sales_invoice_no",
+   "fieldtype": "Link",
+   "label": "Sales Invoice No",
+   "options": "Sales Invoice",
+   "read_only": 1
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Rental Agreement Item"
   }
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2025-03-16 06:30:42.895348",
+ "modified": "2025-03-17 15:29:04.027812",
  "modified_by": "Administrator",
  "module": "Media Rent Custom",
  "name": "Rental Agreement",
