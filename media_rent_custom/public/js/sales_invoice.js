@@ -1,8 +1,11 @@
 frappe.ui.form.on('Sales Invoice Item', {
-    custom_start_date: function(frm, cdt, cdn) {
+    start_date: function(frm, cdt, cdn) {
         calculate_qty(frm, cdt, cdn);
     },
-    custom_end_date: function(frm, cdt, cdn) {
+    end_date: function(frm, cdt, cdn) {
+        calculate_qty(frm, cdt, cdn);
+    },
+    custom_quantity: function(frm, cdt, cdn) {
         calculate_qty(frm, cdt, cdn);
     },
     qty: function(frm, cdt, cdn) {
@@ -21,8 +24,8 @@ function calculate_qty(frm, cdt, cdn) {
         var time_difference = end_date - start_date;
         var days_difference = time_difference / (1000 * 3600 * 24);
 
-        frappe.model.set_value(cdt, cdn, 'custom_rental_days', days_difference);
-        frappe.model.set_value(cdt, cdn, 'amount', days_difference * doc.qty * doc.rate);
+        frappe.model.set_value(cdt, cdn, 'rental_days', days_difference);
+        frappe.model.set_value(cdt, cdn, 'qty', days_difference * doc.custom_quantity);
 
         frm.refresh_field('items');
     }

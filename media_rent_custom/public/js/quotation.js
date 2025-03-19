@@ -1,8 +1,8 @@
 frappe.ui.form.on('Quotation', {
     validate: function(frm) {
         for (let row of frm.doc.items) {
-            if (row.actual_qty < row.qty) {
-                frappe.throw(__(`Insufficient quantity available for rental of item <b>${row.item_code}</b>. Please adjust the requested quantity.`));
+            if (row.actual_qty < row.custom_quantity) {
+                frappe.msgprint(__(`Insufficient quantity available for rental of item <b>${row.item_code}</b>. Please adjust the requested quantity.`));
             }
             if (!row.start_date || !row.end_date) {
                 console.log("test")
@@ -40,6 +40,9 @@ frappe.ui.form.on('Quotation Item', {
     end_date: function(frm, cdt, cdn) {
         calculate_qty(frm, cdt, cdn);
     },
+    custom_quantity: function(frm, cdt, cdn) {
+        calculate_qty(frm, cdt, cdn);
+    },
     qty: function(frm, cdt, cdn) {
         calculate_qty(frm, cdt, cdn);
     },
@@ -57,7 +60,7 @@ function calculate_qty(frm, cdt, cdn) {
         var days_difference = time_difference / (1000 * 3600 * 24);
 
         frappe.model.set_value(cdt, cdn, 'rental_days', days_difference);
-        frappe.model.set_value(cdt, cdn, 'amount', days_difference * doc.qty * doc.rate);
+        frappe.model.set_value(cdt, cdn, 'qty', days_difference * doc.custom_quantity);
 
         frm.refresh_field('items');
     }
